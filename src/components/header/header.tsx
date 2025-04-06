@@ -60,9 +60,10 @@ export function Header() {
                         <Avatar
                             name='Екатерина Константинопольская'
                             src='src/assets/avatars/avatar-konstantinopolskaia.png'
-                            bg='gray.100'
+                            bg='brand.200'
                             width='48px'
                             mr='12px'
+                            textColor='white'
                         />
                     </Box>
                     <Box>
