@@ -15,10 +15,10 @@ export function Header() {
         <Box
             as='header'
             color='black'
-            maxWidth='1920px'
+            width={{ base: '360px', md: '768px', lg: '1440px', xl: '1920px' }}
             paddingY='16px'
-            bg='#ffffd3'
-            marginX='auto'
+            bg='brand.100'
+            margin='auto'
         >
             <Flex justify='start' align='center'>
                 <Image
@@ -29,28 +29,32 @@ export function Header() {
                     mr='128px'
                 />
                 <Breadcrumb
-                    width='672px'
+                    width={{ lg: '672px', xl: '1152px' }}
                     height='24px'
                     spacing='8px'
                     separator={<ChevronRightIcon color='gray.800' />}
+                    hideBelow='lg'
                 >
-                    <BreadcrumbItem isCurrentPage>
-                        <BreadcrumbLink href='#'>Contact</BreadcrumbLink>
+                    <BreadcrumbItem>
+                        <BreadcrumbLink href='#' color='blackAlpha.700'>
+                            Главная
+                        </BreadcrumbLink>
                     </BreadcrumbItem>
                     <BreadcrumbItem isCurrentPage>
-                        <BreadcrumbLink href='#'>Contact</BreadcrumbLink>
-                    </BreadcrumbItem>
-                    <BreadcrumbItem isCurrentPage>
-                        <BreadcrumbLink href='#'>Contact</BreadcrumbLink>
+                        <BreadcrumbLink href='#' color='black'>
+                            Самое сочное
+                        </BreadcrumbLink>
                     </BreadcrumbItem>
                 </Breadcrumb>
                 <Flex
                     pr='24px'
                     pl='53px'
+                    mr='24px'
                     width='432px'
                     height='48px'
                     textAlign='left'
                     justify='center'
+                    hideBelow='lg'
                 >
                     <Box>
                         <Avatar
