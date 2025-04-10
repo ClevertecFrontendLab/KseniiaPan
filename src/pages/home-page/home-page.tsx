@@ -1,5 +1,6 @@
 import { Box } from '@chakra-ui/react';
 
+import CulinaryBlogs from '../../components/culinary-blogs/culinary-blogs';
 import Header from '../../components/header/header';
 import NewRecepies from '../../components/new-recepies/new-recepies';
 import SearchForm from '../../components/search-form/search-form';
@@ -17,6 +18,7 @@ function HomePage() {
                 <SearchForm />
                 <NewRecepies />
                 <TastiestRecepies />
+                <CulinaryBlogs />
             </Box>
         </>
     );
