@@ -1,4 +1,4 @@
-import { ChevronRightIcon } from '@chakra-ui/icons';
+import { ChevronRightIcon, HamburgerIcon } from '@chakra-ui/icons';
 import {
     Avatar,
     Box,
@@ -6,6 +6,7 @@ import {
     BreadcrumbItem,
     BreadcrumbLink,
     Flex,
+    IconButton,
     Image,
     Text,
 } from '@chakra-ui/react';
@@ -26,7 +27,17 @@ export function Header() {
                     src='src/assets/logo/logo.svg'
                     alt='Логотип приложения "Yeedaa"'
                     ml='16px'
-                    mr='128px'
+                    mr={{ md: '341px', lg: '128px', xl: '128px' }}
+                    hideBelow='md'
+                />
+                <Image
+                    display={{ base: 'block', md: 'none', lg: 'none', xl: 'none' }}
+                    align='center'
+                    width='32px'
+                    src='src/assets/logo/logo-1.svg'
+                    alt='Логотип приложения "Yeedaa"'
+                    ml='16px'
+                    mr='61px'
                 />
                 <Breadcrumb
                     width={{ lg: '672px', xl: '1152px' }}
@@ -46,6 +57,49 @@ export function Header() {
                         </BreadcrumbLink>
                     </BreadcrumbItem>
                 </Breadcrumb>
+                <Flex paddingX={{ base: '8px', md: '16px' }}>
+                    <Box
+                        width='56px'
+                        paddingY='4px'
+                        paddingX='8px'
+                        gap='6px'
+                        display='flex'
+                        alignItems='center'
+                        justifyContent='start'
+                    >
+                        <Image src='src/assets/icons/pages/bookmark.svg' width='12px' />
+                        <Text color='brand.200' fontWeight='600' fontSize='12px' lineHeight='133%'>
+                            185
+                        </Text>
+                    </Box>
+                    <Box
+                        width='56px'
+                        paddingY='4px'
+                        paddingX='8px'
+                        gap='6px'
+                        display='flex'
+                        alignItems='center'
+                        justifyContent='start'
+                    >
+                        <Image src='src/assets/icons/pages/people.svg' width='12px' />
+                        <Text color='brand.200' fontWeight='600' fontSize='12px' lineHeight='133%'>
+                            589
+                        </Text>
+                    </Box>
+                    <Box
+                        width='56px'
+                        paddingY='4px'
+                        paddingX='8px'
+                        gap='6px'
+                        display='flex'
+                        alignItems='center'
+                    >
+                        <Image src='src/assets/icons/pages/emoji.svg' width='12px' />
+                        <Text color='brand.200' fontWeight='600' fontSize='12px' lineHeight='133%'>
+                            587
+                        </Text>
+                    </Box>
+                </Flex>
                 <Flex
                     pr='24px'
                     pl='53px'
@@ -71,6 +125,13 @@ export function Header() {
                         <Text>@bake_and_pie</Text>
                     </Box>
                 </Flex>
+                <IconButton
+                    icon={<HamburgerIcon boxSize='24px' />}
+                    aria-label='Hamburger menu'
+                    display={{ base: 'flex', md: 'none', lg: 'none', xl: 'none' }}
+                    background='none'
+                    padding='12px'
+                />
             </Flex>
         </Box>
     );
