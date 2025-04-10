@@ -1,6 +1,7 @@
 import { Box } from '@chakra-ui/react';
 
 import Header from '../../components/header/header';
+import NewRecepies from '../../components/new-recepies/new-recepies';
 import SearchForm from '../../components/search-form/search-form';
 
 function HomePage() {
@@ -13,6 +14,7 @@ function HomePage() {
                 marginX='auto'
             >
                 <SearchForm />
+                <NewRecepies />
             </Box>
         </>
     );
