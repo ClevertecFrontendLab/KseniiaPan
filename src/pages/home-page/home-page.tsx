@@ -3,6 +3,7 @@ import { Box } from '@chakra-ui/react';
 import Header from '../../components/header/header';
 import NewRecepies from '../../components/new-recepies/new-recepies';
 import SearchForm from '../../components/search-form/search-form';
+import TastiestRecepies from '../../components/tasties-recepies/tasties-recepies';
 
 function HomePage() {
     return (
@@ -15,6 +16,7 @@ function HomePage() {
             >
                 <SearchForm />
                 <NewRecepies />
+                <TastiestRecepies />
             </Box>
         </>
     );
