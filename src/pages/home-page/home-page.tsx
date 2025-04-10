@@ -5,6 +5,7 @@ import Header from '../../components/header/header';
 import NewRecepies from '../../components/new-recepies/new-recepies';
 import SearchForm from '../../components/search-form/search-form';
 import TastiestRecepies from '../../components/tasties-recepies/tasties-recepies';
+import VeganRecipes from '../../components/vegan-recipes/vegan-recipes';
 
 function HomePage() {
     return (
@@ -19,6 +20,7 @@ function HomePage() {
                 <NewRecepies />
                 <TastiestRecepies />
                 <CulinaryBlogs />
+                <VeganRecipes />
             </Box>
         </>
     );
